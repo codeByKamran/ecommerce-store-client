@@ -1,0 +1,30 @@
+.app-body {
+  position: relative;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 9;
+  display: none;
+  min-height: 100vh;
+  opacity: 0;
+  animation: fadein 0.15s forwards linear;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.background-overlay.show {
+  display: block;
+}
